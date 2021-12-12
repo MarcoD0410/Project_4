@@ -16,6 +16,7 @@ from masonite.providers import (
     UploadProvider,
     ViewProvider,
     WhitenoiseProvider,
+    CorsProvider,
 )
 from masonite.logging.providers import LoggingProvider
 from masonite.validation.providers import ValidationProvider
@@ -39,6 +40,7 @@ PROVIDERS = [
     StatusCodeProvider,
     WhitenoiseProvider,
     ViewProvider,
+    CorsProvider,
     # Optional Framework Providers
     MailProvider,
     UploadProvider,
@@ -53,3 +55,11 @@ PROVIDERS = [
     ORMProvider,
     # Application Providers
 ]
+
+CORS = {
+    'Access-Control-Allow-Origin': "*",
+    "Access-Control-Allow-Methods": "*",
+    "Access-Control-Allow-Headers": "*",
+    "Access-Control-Max-Age": "3600",
+    "Access-Control-Allow-Credentials": "true"
+}
